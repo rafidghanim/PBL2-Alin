@@ -209,8 +209,6 @@ Hasil Kompresi Ditampilkan
 User Dapat Mengunduh Hasil
 ```
 
-[Butuh gambar: diagram alur kerja aplikasi]
-
 ---
 
 ## 📊 Metrik Evaluasi
