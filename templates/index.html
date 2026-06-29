@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{ title or "PCA Image Compressor" }}{% endblock %}
+
+{% block content %}
+  <section class="main-grid">
+    <div class="left-stack">
+      {% include "partials/upload_panel.html" %}
+      {% include "partials/settings_panel.html" %}
+    </div>
+
+    {% include "partials/results_panel.html" %}
+  </section>
+
+  {% include "partials/note_bar.html" %}
+{% endblock %}

@@ -1,0 +1,43 @@
+<article class="card settings-panel">
+  <h2>2. Pengaturan Kompresi</h2>
+
+  <div class="method-box">
+    <span><i data-lucide="circle-dot"></i></span>
+    <div>
+      <strong>PCA (Singular Value Decomposition)</strong>
+      <p>Menggunakan PCA untuk mereduksi dimensi data gambar</p>
+    </div>
+  </div>
+
+  <label class="control-label">
+    <span>Jumlah Komponen (k) <i data-lucide="circle-help"></i></span>
+    <div class="range-row">
+      <input type="range" min="10" max="300" value="150">
+      <output>150</output>
+    </div>
+  </label>
+
+  <div class="variance-row">
+    <span>Persentase Varians Retained (Perkiraan) <i data-lucide="circle-help"></i></span>
+    <strong id="varianceValue">92.35%</strong>
+  </div>
+
+  <div class="preset-group" aria-label="Preset persentase varians">
+    <p>Atau pilih berdasarkan persentase varians</p>
+    <button type="button">70%</button>
+    <button type="button">80%</button>
+    <button class="active" type="button">90%</button>
+    <button type="button">95%</button>
+    <button type="button">98%</button>
+  </div>
+
+  <button class="accordion-btn" type="button">
+    <span><i data-lucide="settings"></i>Opsi Lainnya (Opsional)</span>
+    <i data-lucide="chevron-down"></i>
+  </button>
+
+  <button class="primary-btn" type="button">
+    <i data-lucide="play"></i>
+    Mulai Kompresi
+  </button>
+</article>
