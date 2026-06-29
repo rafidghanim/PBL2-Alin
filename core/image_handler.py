@@ -5,8 +5,8 @@ def load_image(file_path):
     #digunakan untuk membaca gambar yang diupload pengguna
     image = Image.open(file_path)
 
-    #digunakan untuk mengubah gambar menjadi grayscale
-    image = image.convert("L")
+    #digunakan untuk mengubah gambar menjadi RGB agar warna tetap dipertahankan
+    image = image.convert("RGB")
 
     #digunakan untuk mengubah gambar menjadi array Numpy
     image_array = np.array(image,dtype=np.float64)

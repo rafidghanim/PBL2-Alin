@@ -21,7 +21,7 @@ class PCA:
         return np.cov(centered_matrix, rowvar=False)
     
     def eigen_decomposition(self, covariance):
-        eigenvalues, eigenvectors = np.linalg.eig(covariance)
+        eigenvalues, eigenvectors = np.linalg.eigh(covariance)
 
         return eigenvalues, eigenvectors 
     
@@ -60,6 +60,8 @@ class PCA:
         #untuk mengurutkan eigenvalue dan eigenvector
         eigenvalues,eigenvectors = self.sort_eigen(eigenvalues, eigenvectors)
 
+        self.k = max(1, min(self.k, eigenvectors.shape[1]))
+
         #untuk memilih komponen utama
         components = self.select_components(eigenvectors)
 
@@ -69,4 +71,9 @@ class PCA:
         #rekontruksi data
         reconstructed = self.reconstruct(transformed, components, mean)
 
-        return reconstructed
+        total_variance = np.sum(eigenvalues)
+        retained_variance = 0.0
+        if total_variance > 0:
+            retained_variance = np.sum(eigenvalues[:self.k]) / total_variance * 100
+
+        return reconstructed, retained_variance

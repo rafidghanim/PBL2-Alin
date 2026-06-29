@@ -12,7 +12,7 @@
   <label class="control-label">
     <span>Jumlah Komponen (k) <i data-lucide="circle-help"></i></span>
     <div class="range-row">
-      <input type="range" min="10" max="300" value="150">
+      <input type="range" min="10" max="300" value="150" data-k-input>
       <output>150</output>
     </div>
   </label>
@@ -31,13 +31,10 @@
     <button type="button">98%</button>
   </div>
 
-  <button class="accordion-btn" type="button">
-    <span><i data-lucide="settings"></i>Opsi Lainnya (Opsional)</span>
-    <i data-lucide="chevron-down"></i>
-  </button>
+  <p class="form-status" data-form-status role="status" aria-live="polite"></p>
 
-  <button class="primary-btn" type="button">
+  <button class="primary-btn" type="button" data-compress-button>
     <i data-lucide="play"></i>
-    Mulai Kompresi
+    <span>Mulai Kompresi</span>
   </button>
 </article>

@@ -1,7 +1,7 @@
 <article class="card upload-panel">
   <h1>1. Upload Gambar</h1>
   <label class="dropzone" for="imageUpload">
-    <input id="imageUpload" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp">
+    <input id="imageUpload" name="image" type="file" accept=".jpg,.jpeg,.png,.bmp,.webp">
     <i data-lucide="cloud-upload"></i>
     <strong>Drag & drop gambar di sini</strong>
     <span>atau klik untuk memilih file</span>
@@ -10,11 +10,11 @@
   <div class="file-card">
     <div class="thumb" aria-label="Preview gambar"></div>
     <div>
-      <strong class="file-name">pemandangan.jpg</strong>
-      <span>1920 x 1280 px</span>
+      <strong class="file-name">Belum ada file</strong>
+      <span data-file-dimensions>-</span>
     </div>
-    <small>1.25 MB</small>
-    <button class="icon-btn tiny" type="button" aria-label="Hapus file"><i data-lucide="x"></i></button>
+    <small data-file-size>-</small>
+    <button class="icon-btn tiny" type="button" aria-label="Hapus file" data-clear-file><i data-lucide="x"></i></button>
   </div>
 
   <p class="format-note">

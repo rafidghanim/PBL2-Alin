@@ -70,6 +70,10 @@ input {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 button,
 .dropzone,
 .brand,
@@ -171,7 +175,6 @@ button,
 }
 
 .sidebar-card {
-  margin-top: auto;
   padding: 22px 20px;
   border: 1px solid #bfd0f5;
   border-radius: 8px;
@@ -386,9 +389,10 @@ h3 {
   width: 54px;
   height: 44px;
   border-radius: 6px;
-  background-image: var(--photo);
+  background-image: none;
   background-size: cover;
   background-position: center;
+  background-color: var(--control-soft);
 }
 
 .file-card strong {
@@ -575,6 +579,14 @@ output,
   font-weight: 800;
 }
 
+.primary-btn:disabled,
+.secondary-btn:disabled,
+.disabled-link {
+  cursor: not-allowed;
+  opacity: 0.58;
+  pointer-events: none;
+}
+
 .primary-btn {
   color: #fff;
   background: linear-gradient(135deg, var(--primary-2), #3d22e8);
@@ -591,6 +603,21 @@ output,
 .secondary-btn svg {
   width: 20px;
   height: 20px;
+}
+
+.form-status {
+  min-height: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-status[data-status="success"] {
+  color: var(--success);
+}
+
+.form-status[data-status="error"] {
+  color: #e5484d;
 }
 
 .results-panel > h2 {
@@ -619,9 +646,10 @@ figcaption {
 .image-preview {
   height: 300px;
   border-radius: 7px;
-  background-image: var(--photo);
+  background-image: none;
   background-size: cover;
   background-position: center;
+  background-color: var(--control-bg);
 }
 
 .image-preview.compressed {
@@ -772,8 +800,8 @@ dd.success svg {
 
 .variance-chart {
   position: relative;
-  height: 250px;
-  margin: 20px 0 14px;
+  height: 280px;
+  margin: 20px 0 18px;
   border-left: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background:
@@ -784,9 +812,9 @@ dd.success svg {
 
 .variance-chart svg {
   position: absolute;
-  inset: 8px 12px 22px 24px;
-  width: calc(100% - 36px);
-  height: calc(100% - 30px);
+  inset: 38px 14px 48px 28px;
+  width: calc(100% - 42px);
+  height: calc(100% - 86px);
   overflow: visible;
 }
 
@@ -809,28 +837,28 @@ dd.success svg {
 }
 
 .chart-y {
-  left: -42px;
-  top: 50%;
-  transform: rotate(-90deg);
+  left: 12px;
+  top: 10px;
 }
 
 .chart-x {
   left: 50%;
-  bottom: -28px;
+  bottom: 12px;
   transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .marker-line {
   position: absolute;
-  top: 10px;
-  bottom: 22px;
+  top: 38px;
+  bottom: 48px;
   left: 57%;
   border-left: 1px dashed #8793aa;
 }
 
 .marker-label {
   position: absolute;
-  top: 72px;
+  top: 96px;
   left: 58%;
   z-index: 1;
   padding: 8px 10px;

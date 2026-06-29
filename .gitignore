@@ -17,16 +17,30 @@ instance/
 # Environment files
 .env
 .env.*
+.flaskenv
 
 # Local tooling and OS files
 .DS_Store
 .idea/
 .vscode/
+*.log
 
 # Build and test artifacts
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
 dist/
 build/
 *.egg-info/
+.ipynb_checkpoints/
+
+compressed/*
+!compressed/.gitkeep
+
+data/*
+!data/.gitkeep
+
+uploads/*
+!uploads/.gitkeep
