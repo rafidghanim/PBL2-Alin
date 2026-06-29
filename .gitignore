@@ -10,6 +10,7 @@ env/
 
 # Flask
 instance/
+!instance/.gitkeep
 *.db
 *.sqlite
 *.sqlite3
