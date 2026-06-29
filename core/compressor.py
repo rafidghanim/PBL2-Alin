@@ -1,5 +1,5 @@
-from backend.image_handler import load_image, save_image 
-from backend.pca import PCA 
+from core.image_handler import load_image, save_image 
+from core.pca import PCA 
 
 class ImageCompressor:
 
