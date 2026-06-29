@@ -9,7 +9,6 @@ venv/
 env/
 
 # Flask
-instance/
 !instance/.gitkeep
 *.db
 *.sqlite
